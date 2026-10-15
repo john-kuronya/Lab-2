@@ -3,6 +3,19 @@
 <form [formGroup]="progressNotesForm">
 
   <div>
+  <label for="project-code">Project Code:</label>
+  <input
+    id="project-code"
+    type="text"
+    formControlName="projectCode"
+    (blur)="updateProjectName()">
+
+    @if (projectCodeMessage) {
+  <p>{{ projectCodeMessage }}</p>
+}
+</div>
+
+  <div>
     <label for="project-name">Project Name:</label>
     <input
       id="project-name"
