@@ -1,12 +1,22 @@
 
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
 import { MilestoneTracker } from './milestone-tracker/milestone-tracker';
 import { ProgressNotes } from './progress-notes/progress-notes';
 import { MilestoneApi } from './milestone-api/milestone-api';
 
+// Lab 5: MongoDB CRUD component
+import { ProjectCrud } from './project-crud/project-crud';
+
 @Component({
-  imports: [RouterOutlet, MilestoneTracker, ProgressNotes, MilestoneApi],
+  imports: [
+    RouterOutlet,
+    MilestoneTracker,
+    ProgressNotes,
+    MilestoneApi,
+    ProjectCrud
+  ],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
